@@ -5,11 +5,6 @@ using System.Text;
 using System.Threading.Tasks;
 namespace AdventOfCode2020.Puzzles
 {
-    /// <summary>
-    /// 1-3 a: abcde
-    ///1-3 b: cdefg
-    ///2-9 c: ccccccccc
-    /// </summary>
     class Day2
     {
         public static void PuzzleA(string[] values)
@@ -46,8 +41,9 @@ namespace AdventOfCode2020.Puzzles
                     }
                 }
             }
-            Console.WriteLine($"If I have done my programming right, there is: {countOfWords} passwords being");
-            Console.WriteLine("Correct, according to its criteria");
+            Console.WriteLine($"Number of passwords in list being valid, according to its criteria");
+            Console.WriteLine($"The answer to day 2 Puzzle A is: {countOfWords} ");
+            Console.WriteLine("------------------------------------------------");
         }
         public static void PuzzleB(string[] values)
         {
@@ -75,69 +71,8 @@ namespace AdventOfCode2020.Puzzles
                     countOfWords++;
                 }
             }
-            Console.WriteLine($"If I have done my programming right, there is: {countOfWords} passwords being");
-            Console.WriteLine("Correct, according to its criteria");
-        }
-
-
-        public static void Knowit()
-        {
-            //5433000
-            int countPresents = 0;
-            //int j = 0;
-            for (int i = 0; i < 10; i++)
-            {
-                countPresents++;
-                Console.WriteLine(countPresents + " + " + i);
-                string value = i.ToString();
-                if (value.Contains("7"))
-                {
-                    int k = i;
-                    //var isPrime = IsPrime(k);
-                    while (!IsPrime(k))
-                    {
-                        k--;
-                    }
-                    i = i + k;
-                }
-            }
-            Console.WriteLine("Answer is: " + countPresents + " ");
-
-            /*if (IsPrime(k))
-        {
-            i = i + k - 1;
-        }
-        for (k = i; k > 0; k--)
-        {
-            if (IsPrime(k))
-            {
-                i = i + k - 1;
-                Console.WriteLine(countPresents + " ");
-                break;
-            }
-        }
-    }
-    /*if (!value.Contains("7"))
-    {
-        j++;
-    }*/
-            /*}
-        Console.WriteLine(countPresents + " ");*/
-        }
-
-        public static bool IsPrime(int number)
-        {
-            if (number <= 1) return false;
-            if (number == 2) return true;
-            if (number % 2 == 0) return false;
-
-            var boundary = (int)Math.Floor(Math.Sqrt(number));
-
-            for (int i = 3; i <= boundary; i += 2)
-                if (number % i == 0)
-                    return false;
-
-            return true;
+            Console.WriteLine($"Passwords having char at position x OR y");
+            Console.WriteLine($"The answer to day 2 Puzzle B is: {countOfWords} ");
         }
     }
 }

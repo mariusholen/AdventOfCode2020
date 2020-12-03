@@ -18,11 +18,10 @@ namespace AdventOfCode2020
         }
         public string ConfigureCookie()
         { 
-            // Insert cookie from https://adventofcode.com/ in format session=xyz 
             string cookie = "";
             if (string.IsNullOrWhiteSpace(cookie))
             {
-                Console.WriteLine("Please insert the cookie");
+                Console.WriteLine("Please insert your cookie from https://adventofcode.com/ in the format 'session=xyz123'");
                 cookie = Console.ReadLine();
             }
             return cookie;
@@ -39,10 +38,19 @@ namespace AdventOfCode2020
 
             if (day == 1)
             {
-                Day1 day1 = new Day1();
                 Day1.PuzzleA(values);
                 Day1.PuzzleB(values);
-            } 
+            }
+            if (day == 2)
+            {
+                Day2.PuzzleA(values);
+                Day2.PuzzleB(values);
+            }
+            if (day == 3)
+            {
+                Day3.PuzzleA(values);
+                Day3.PuzzleB(values);
+            }
         }
     }
 }
