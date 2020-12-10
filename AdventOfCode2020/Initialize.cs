@@ -66,6 +66,11 @@ namespace AdventOfCode2020
                 Day6.PuzzleA(response);
                 Day6.PuzzleB(response);
             }
+            if (day == 7)
+            {
+                Day7.PuzzleA(values);
+                Day7.PuzzleB(values);
+            }
         }
     }
 }
